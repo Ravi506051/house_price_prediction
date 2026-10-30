@@ -11,3 +11,9 @@ Use a held-out test set to assess predictions. For a regression model, report MA
 ## Limitations
 
 A model trained on historical housing data may not reflect current market conditions. Predictions depend on the coverage, quality, and date of the dataset and should be treated as estimates rather than property valuations.
+
+## Project Development Notes
+
+Document the dataset date, location coverage, currency, and feature definitions. Compare a simple baseline with tree-based regressors using MAE and RMSE on a held-out split.
+
+For reproducible updates, record the dataset/source version, environment and dependency versions, preprocessing choices, and actual outputs from each run. Keep sample values clearly labelled and do not publish secrets or private data.
