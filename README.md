@@ -17,3 +17,9 @@ A model trained on historical housing data may not reflect current market condit
 Document the dataset date, location coverage, currency, and feature definitions. Compare a simple baseline with tree-based regressors using MAE and RMSE on a held-out split.
 
 For reproducible updates, record the dataset/source version, environment and dependency versions, preprocessing choices, and actual outputs from each run. Keep sample values clearly labelled and do not publish secrets or private data.
+
+### Technical Deep Dive
+
+Treat this as a regression problem with a clearly defined target (sale price) and documented feature units. Compare a median-price baseline with linear and tree-based regressors. If records contain dates or geographic identifiers, choose a split that reflects the intended prediction scenario and prevents near-duplicate properties or future records from leaking across train and test sets.
+
+Suggested engineering checks: fit imputers/encoders inside a Pipeline, report MAE and RMSE in the dataset currency, inspect residuals by price range, and document the dataset's geographic and time coverage.
