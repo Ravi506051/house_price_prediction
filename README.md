@@ -31,3 +31,11 @@ Suggested engineering checks: fit imputers/encoders inside a Pipeline, report MA
 - Fit imputers, encoders, and scalers inside a training pipeline to prevent data leakage.
 - Report MAE and RMSE in the dataset's currency, inspect residuals by price range, and document the split strategy.
 - Historical model outputs are estimates, not formal property valuations; market conditions and geographic coverage can change substantially.
+
+## Model Validation and Deployment Notes
+
+- Define the target price, currency, property feature units, and geographic coverage explicitly.
+- Compare against a median-price baseline before evaluating more complex regression models.
+- Fit missing-value imputation, categorical encoding, and scaling inside a training pipeline.
+- Check residuals across price ranges and locations to identify systematic prediction errors.
+- Monitor prediction drift when the model is used with newer market data; outputs are estimates, not formal valuations.
