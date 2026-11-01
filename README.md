@@ -39,3 +39,10 @@ Suggested engineering checks: fit imputers/encoders inside a Pipeline, report MA
 - Fit missing-value imputation, categorical encoding, and scaling inside a training pipeline.
 - Check residuals across price ranges and locations to identify systematic prediction errors.
 - Monitor prediction drift when the model is used with newer market data; outputs are estimates, not formal valuations.
+
+## Model Validation Notes
+
+- Document the dataset date, geographic coverage, currency, and units for every property feature.
+- Compare complex regressors with a median-price baseline using a held-out test set.
+- Fit preprocessing steps inside a training pipeline and inspect residuals across price ranges and locations.
+- Treat outputs as estimates rather than formal valuations, especially when market conditions or coverage change.
