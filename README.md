@@ -1,48 +1,33 @@
-# house_price_prediction
+# House Price Prediction
 
-## Project Goal
+A machine-learning project exploring how property attributes can be used to estimate house prices. The repository provides a practical workflow for preparing structured data, training regression models and reviewing prediction errors.
 
-Explore a housing dataset and build a data-driven workflow for estimating house prices from available property attributes.
+## Workflow
+- Inspect property features, target values and missing data.
+- Prepare numerical and categorical variables.
+- Establish a simple baseline.
+- Train and compare suitable regression models.
+- Evaluate predictions on held-out data.
+- Review residuals and feature contributions.
 
-## Suggested Evaluation Practice
+## Technology
+Python · Pandas · NumPy · Scikit-learn · Data Visualization
 
-Use a held-out test set to assess predictions. For a regression model, report MAE and RMSE alongside R-squared, and compare predicted prices with observed prices. If the data contains location or time information, check whether the split reflects the intended use case and avoids information leakage.
+## Getting started
+```bash
+git clone https://github.com/Ravi506051/house_price_prediction.git
+cd house_price_prediction
+python -m venv .venv
+# Windows: .venv\\Scripts\\activate
+pip install -r requirements.txt
+```
+Open the notebook or run the project entry point available in the repository. If there is no requirements file, install the libraries imported by the project.
+
+## Model validation
+Document the dataset date, location coverage, currency and feature units. Compare models with a median-price baseline and report actual MAE, RMSE and R-squared results. Fit imputation, encoding and scaling using training data only.
 
 ## Limitations
+Predictions are estimates, not formal property valuations. Market conditions, location coverage and data quality can materially affect results.
 
-A model trained on historical housing data may not reflect current market conditions. Predictions depend on the coverage, quality, and date of the dataset and should be treated as estimates rather than property valuations.
-
-## Project Development Notes
-
-Document the dataset date, location coverage, currency, and feature definitions. Compare a simple baseline with tree-based regressors using MAE and RMSE on a held-out split.
-
-For reproducible updates, record the dataset/source version, environment and dependency versions, preprocessing choices, and actual outputs from each run. Keep sample values clearly labelled and do not publish secrets or private data.
-
-### Technical Deep Dive
-
-Treat this as a regression problem with a clearly defined target (sale price) and documented feature units. Compare a median-price baseline with linear and tree-based regressors. If records contain dates or geographic identifiers, choose a split that reflects the intended prediction scenario and prevents near-duplicate properties or future records from leaking across train and test sets.
-
-Suggested engineering checks: fit imputers/encoders inside a Pipeline, report MAE and RMSE in the dataset currency, inspect residuals by price range, and document the dataset's geographic and time coverage.
-
-## Modelling and Validation Notes
-
-- Record the dataset source, location coverage, collection period, currency, and units for every property feature.
-- Compare a median-price baseline with regression models using a held-out test set.
-- Fit imputers, encoders, and scalers inside a training pipeline to prevent data leakage.
-- Report MAE and RMSE in the dataset's currency, inspect residuals by price range, and document the split strategy.
-- Historical model outputs are estimates, not formal property valuations; market conditions and geographic coverage can change substantially.
-
-## Model Validation and Deployment Notes
-
-- Define the target price, currency, property feature units, and geographic coverage explicitly.
-- Compare against a median-price baseline before evaluating more complex regression models.
-- Fit missing-value imputation, categorical encoding, and scaling inside a training pipeline.
-- Check residuals across price ranges and locations to identify systematic prediction errors.
-- Monitor prediction drift when the model is used with newer market data; outputs are estimates, not formal valuations.
-
-## Model Validation Notes
-
-- Document the dataset date, geographic coverage, currency, and units for every property feature.
-- Compare complex regressors with a median-price baseline using a held-out test set.
-- Fit preprocessing steps inside a training pipeline and inspect residuals across price ranges and locations.
-- Treat outputs as estimates rather than formal valuations, especially when market conditions or coverage change.
+## Maintainer
+**Ravi Kumar Rao** · [GitHub](https://github.com/Ravi506051)
