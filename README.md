@@ -43,3 +43,10 @@ Predictions are estimates, not formal property valuations. Market conditions, lo
 ## Portfolio Context
 
 This project is part of my hands-on learning portfolio. The repository documents the workflow and implementation; results should be reproduced from the included code and data before being used in reports or professional claims.
+
+## Model Validation and Practical Considerations
+
+- Establish a baseline before comparing regression algorithms.
+- Check missing values, outliers, skewed prices, and categorical feature handling.
+- Evaluate with MAE, RMSE, and R-squared on held-out data; inspect residuals for systematic errors.
+- Predictions are estimates based on the available dataset and should not be treated as formal property valuations.
