@@ -22,7 +22,7 @@ python -m venv .venv
 jupyter notebook
 ```
 
-On Windows, activate the environment with `\.venv\Scripts\Activate.ps1`; on macOS/Linux, use `source .venv/bin/activate`. Check any dataset path in the notebook before running all cells. This repository does not include a `requirements.txt`.
+On Windows, activate the environment with `.\.venv\Scripts\Activate.ps1`; on macOS/Linux, use `source .venv/bin/activate`. Check any dataset path in the notebook before running all cells. This repository does not include a `requirements.txt`.
 
 ## Model validation
 Document the dataset date, location coverage, currency and feature units. Compare models with a median-price baseline and report actual MAE, RMSE and R-squared results. Fit imputation, encoding and scaling using training data only.
