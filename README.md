@@ -32,21 +32,16 @@ Predictions are estimates, not formal property valuations. Market conditions, lo
 ## Maintainer
 **Ravi Kumar Rao** · [GitHub](https://github.com/Ravi506051)
 
-## Skills Demonstrated
+## Reproduce the notebooks
 
-- Regression modelling
-- numerical and categorical feature preparation
-- baseline comparison
-- residual analysis
-- MAE/RMSE evaluation.
+This repository contains two notebooks: `house_price_prediction.ipynb` and `house_price_prediction (1).ipynb`. Create a Python environment, install the libraries imported by the notebook, then open it with Jupyter:
 
-## Portfolio Context
+```bash
+python -m venv .venv
+# Windows: .venv\\Scripts\\activate
+# macOS/Linux: source .venv/bin/activate
+pip install jupyter
+jupyter notebook
+```
 
-This project is part of my hands-on learning portfolio. The repository documents the workflow and implementation; results should be reproduced from the included code and data before being used in reports or professional claims.
-
-## Model Validation and Practical Considerations
-
-- Establish a baseline before comparing regression algorithms.
-- Check missing values, outliers, skewed prices, and categorical feature handling.
-- Evaluate with MAE, RMSE, and R-squared on held-out data; inspect residuals for systematic errors.
-- Predictions are estimates based on the available dataset and should not be treated as formal property valuations.
+Run cells from top to bottom and check any dataset path referenced in the notebook before training. The repository does not include a `requirements.txt`, so the notebook's imports are the source of truth for additional packages.
